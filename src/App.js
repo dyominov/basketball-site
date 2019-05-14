@@ -7,9 +7,6 @@ class App extends Component {
     this.props.history.replace(`/${route}`);
   }
 
-  login() {
-    this.props.auth.login();
-  }
   componentDidMount() {
     const { renewSession } = this.props.auth;
 
