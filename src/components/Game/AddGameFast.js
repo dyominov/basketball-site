@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
 import './Game.css';
 
-const Game = props => {
+const AddGameFast = props => {
   const [homeTeamName, setHomeTeamName] = useState('Boston');
   const [awayTeamName, setAwayTeamName] = useState('Boston');
+  const [fullScore, setFullScore] = useState('');
   const [homeScore, setHomeScore] = useState('');
   const [awayScore, setAwayScore] = useState('');
+
+  function game() {
+    const score = fullScore.trim().split(':');
+    setHomeScore(score[0]);
+    setAwayScore(score[1]);
+  }
 
   const homeTeam = {
     name: homeTeamName,
@@ -21,7 +28,7 @@ const Game = props => {
       <h1>Add Game</h1>
       <form>
         <label>
-          Home Team
+          Game Home Team
           <select value={homeTeamName} onChange={e => setHomeTeamName(e.target.value)}>
             <option value="Boston">Boston</option>
             <option value="Chicago">Chicago</option>
@@ -40,19 +47,6 @@ const Game = props => {
             <option value="Portland">Portland</option>
             <option value="San Antonio">San Antonio</option>
           </select>
-          <p />
-          Home score
-          <input
-            type="text"
-            name="name"
-            value={homeScore}
-            onChange={e => setHomeScore(e.target.value)}
-            placeholder="home score"
-          />
-        </label>
-      </form>
-      <form>
-        <label>
           Away Team
           <select value={awayTeamName} onChange={e => setAwayTeamName(e.target.value)}>
             <option value="Boston">Boston</option>
@@ -72,18 +66,18 @@ const Game = props => {
             <option value="Portland">Portland</option>
             <option value="San Antonio">San Antonio</option>
           </select>
-          <p />
-          Away score
+          Score
           <input
             type="text"
             name="name"
-            value={awayScore}
-            onChange={e => setAwayScore(e.target.value)}
-            placeholder="away score"
+            value={fullScore}
+            onChange={e => setFullScore(e.target.value)}
+            placeholder="game score"
           />
         </label>
       </form>
-      <b />
+
+      <button onClick={() => game()}>Parse data</button>
       <button
         onClick={() =>
           props.createGame({
@@ -98,4 +92,4 @@ const Game = props => {
     </div>
   );
 };
-export default Game;
+export default AddGameFast;

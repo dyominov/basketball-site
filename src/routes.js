@@ -5,13 +5,15 @@ import Home from './components/Home/Home';
 import Callback from './Callback/Callback';
 import Auth from './Auth/Auth';
 import history from './history';
+import Parse from './components/Game/Parse';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import reducers from './store/reducers';
-import OverContainer from './container/OverContainer';
+import ResultContainer from './container/ResultContainer';
 import GameContainer from './container/GameContainer';
+import AddGameFastContainer from './container/AddGameFastContainer';
 
 const auth = new Auth();
 
@@ -38,7 +40,12 @@ export const makeMainRoutes = () => {
             }}
           />
           <Route path="/games" render={props => <GameContainer auth={auth} {...props} />} />
-          <Route path="/over" render={props => <OverContainer auth={auth} {...props} />} />
+          <Route
+            path="/add-game-fast"
+            render={props => <AddGameFastContainer auth={auth} {...props} />}
+          />
+          <Route path="/result" render={props => <ResultContainer auth={auth} {...props} />} />
+          <Route path="/parse" render={props => <Parse auth={auth} {...props} />} />
         </div>
       </Router>
     </Provider>

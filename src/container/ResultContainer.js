@@ -1,13 +1,13 @@
 import React, { Component, Fragment } from 'react';
-import { overCurrentTotalAction } from '../store/actions/gameActions';
+import { getResultAction } from '../store/actions/gameActions';
 import { connect } from 'react-redux';
-import Over from '../components/Game/Over';
+import Result from '../components/Game/Result';
 
-class OverContainer extends Component {
+class ResultContainer extends Component {
   render() {
     return (
       <Fragment>
-        <Over games={this.props.games} overCurrentTotal={this.props.overCurrentTotal} />
+        <Result games={this.props.games} getResult={this.props.getResult} />
       </Fragment>
     );
   }
@@ -20,11 +20,11 @@ const mapStateToProps = state => {
 };
 const mapDispatchToProps = dispatch => {
   return {
-    overCurrentTotal: game => dispatch(overCurrentTotalAction(game))
+    getResult: game => dispatch(getResultAction(game))
   };
 };
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(OverContainer);
+)(ResultContainer);

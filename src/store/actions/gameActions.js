@@ -1,6 +1,6 @@
-import { CREATE_GAME_SUCCESS, OVER_CURRENT_TOTAL_SUCCESS } from './actionTypes';
+import { CREATE_GAME_SUCCESS, GET_RESULT } from './actionTypes';
 
-import { createGame, overCurrentTotal } from '../../api/game-api';
+import { createGame, getResult } from '../../api/game-api';
 
 export const createGameAction = game => async dispatch => {
   await createGame(game).then(body => {
@@ -12,11 +12,11 @@ export const createGameAction = game => async dispatch => {
   });
 };
 
-export const overCurrentTotalAction = game => async dispatch => {
-  await overCurrentTotal(game).then(body => {
+export const getResultAction = game => async dispatch => {
+  await getResult(game).then(body => {
     console.log('action ', body);
     dispatch({
-      type: OVER_CURRENT_TOTAL_SUCCESS,
+      type: GET_RESULT,
       payload: body
     });
   });

@@ -16,8 +16,15 @@ class Home extends Component {
         <Button bsStyle="primary" className="btn-margin" onClick={this.goTo.bind(this, 'games')}>
           Add game
         </Button>
-        <Button bsStyle="primary" className="btn-margin" onClick={this.goTo.bind(this, 'over')}>
-          Over
+        <Button bsStyle="primary" className="btn-margin" onClick={this.goTo.bind(this, 'result')}>
+          Result
+        </Button>
+        <Button
+          bsStyle="primary"
+          className="btn-margin"
+          onClick={this.goTo.bind(this, 'add-game-fast')}
+        >
+          Add Game (Fast)
         </Button>
       </div>
     );
