@@ -14,6 +14,7 @@ import reducers from './store/reducers';
 import ResultContainer from './container/ResultContainer';
 import GameContainer from './container/GameContainer';
 import AddGameFastContainer from './container/AddGameFastContainer';
+import InputsContainer from './container/InputsContainer';
 
 const auth = new Auth();
 
@@ -45,6 +46,7 @@ export const makeMainRoutes = () => {
             render={props => <AddGameFastContainer auth={auth} {...props} />}
           />
           <Route path="/result" render={props => <ResultContainer auth={auth} {...props} />} />
+          <Route path="/many" render={props => <InputsContainer auth={auth} {...props} />} />
           <Route path="/parse" render={props => <Parse auth={auth} {...props} />} />
         </div>
       </Router>
