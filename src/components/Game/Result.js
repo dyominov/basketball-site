@@ -8,9 +8,11 @@ const Result = props => {
   const [homeTeamName, setHomeTeamName] = useState('Boston');
   const [awayTeamName, setAwayTeamName] = useState('Boston');
   const [totalScore, setTotalScore] = useState(0);
+  const [halfScore, setHalfScore] = useState(0);
   const [homeScore, setHomeScore] = useState(0);
   const [awayScore, setAwayScore] = useState(0);
   const [handicape, setHandicape] = useState(0);
+  const [halfHandicape, setHalfHandicape] = useState(0);
 
   const homeTeam = {
     name: homeTeamName
@@ -182,9 +184,73 @@ const Result = props => {
           </label>
         </form>
 
+        <form>
+          Half score:
+          <select value={halfScore} onChange={e => setHalfScore(e.target.value)}>
+            <option value="98.5">98.5</option>
+            <option value="97.5">97.5</option>
+            <option value="96.5">96.5</option>
+            <option value="95.5">95.5</option>
+            <option value="94.5">94.5</option>
+            <option value="93.5">93.5</option>
+            <option value="92.5">92.5</option>
+            <option value="91.5">91.5</option>
+            <option value="90.5">90.5</option>
+            <option value="89.5">89.5</option>
+            <option value="88.5">88.5</option>
+            <option value="87.5">87.5</option>
+          </select>
+          Half Handicap:
+          <select value={halfHandicape} onChange={e => setHalfHandicape(e.target.value)}>
+            <option value="-16.5">-16.5</option>
+            <option value="-15.5">-15.5</option>
+            <option value="-14.5">-14.5</option>
+            <option value="-13.5">-13.5</option>
+            <option value="-12.5">-12.5</option>
+            <option value="-11.5">-11.5</option>
+            <option value="-10.5">-10.5</option>
+            <option value="-9.5">-9.5</option>
+            <option value="-8.5">-8.5</option>
+            <option value="-7.5">-7.5</option>
+            <option value="-6.5">-6.5</option>
+            <option value="-5.5">-5.5</option>
+            <option value="-4.5">-4.5</option>
+            <option value="-3.5">-3.5</option>
+            <option value="-2.5">-2.5</option>
+            <option value="-1.5">-1.5</option>
+            <option value="-0.5">-0.5</option>
+            <option value="+0.5">+0.5</option>
+            <option value="+1.5">+1.5</option>
+            <option value="+2.5">+2.5</option>
+            <option value="+3.5">+3.5</option>
+            <option value="+4.5">+4.5</option>
+            <option value="+5.5">+5.5</option>
+            <option value="+6.5">+6.5</option>
+            <option value="+7.5">+7.5</option>
+            <option value="+8.5">+8.5</option>
+            <option value="+9.5">+9.5</option>
+            <option value="+10.5">+10.5</option>
+            <option value="+11.5">+11.5</option>
+            <option value="+12.5">+12.5</option>
+            <option value="+13.5">+13.5</option>
+            <option value="+14.5">+14.5</option>
+            <option value="+15.5">+15.5</option>
+            <option value="+16.5">+16.5</option>
+          </select>
+        </form>
+
         <button
           onClick={() =>
-            props.getResult({ homeTeam, awayTeam, totalScore, homeScore, awayScore, handicape })
+            props.getResult({
+              homeTeam,
+              awayTeam,
+              totalScore,
+              homeScore,
+              awayScore,
+              handicape,
+              halfScore,
+              halfHandicape
+            })
           }
         >
           check game
@@ -192,21 +258,23 @@ const Result = props => {
         <p />
       </div>
       <div className="score">
-        <Score
-          name={homeTeamName}
-          percentH2H={props.games.percentHome}
-          percent={props.games.averageHome}
-        />
-        <Score
-          name={awayTeamName}
-          percentH2H={props.games.percentAway}
-          percent={props.games.averageAway}
-          //average={props.games.averageAway}
-        />
+        <Score name={homeTeamName} percent={props.games.percentHome} />
+        <Score name={awayTeamName} percent={props.games.percentAway} />
       </div>
       <div className="score">
         <Handicape handicape={handicape} percent={props.games.handicape} />
       </div>
+
+      <div className="score">
+        <p />
+        <p />
+        Half Score
+        <Handicape handicape={halfHandicape} percent={props.games.handicapHalf} />
+      </div>
+      <div className="over">
+        <Over totalScore={halfScore} score={props.games.averageHalf} />
+      </div>
+      <p />
       <p />
       <div className="over">
         <Over totalScore={Number(totalScore) - 3} score={props.games.minTotal} />
