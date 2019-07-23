@@ -5,7 +5,7 @@ export const createGame = async game => {
     method: 'POST',
     headers: {
       Accept: 'application/json',
-      'Content-Type': 'application/json'
+      'Content-Type': 'text/plan'
     },
     body: JSON.stringify(game)
   })
