@@ -2,7 +2,7 @@
   "name": "basketball",
   "version": "0.2.0",
   "private": true,
-  "proxy": "https://dyominov-basket.herokuapp.com/",
+  "proxy": "https://dyominov-basket-server.herokuapp.com/",
   "devDependencies": {
     "react-scripts": "^2.1.1",
     "husky": "^1.3.1",
