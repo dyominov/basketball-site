@@ -25,11 +25,11 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "start": "node server.js",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "start": "npm start",
+    "build": "npm build",
+    "test": "npm test --env=jsdom",
     "prettier": "prettier --write \"**/*.js\"",
-    "eject": "react-scripts eject"
+    "eject": "npm eject"
   },
   "eslintConfig": {
     "extends": "react-app"
