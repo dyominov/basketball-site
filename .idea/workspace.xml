@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2233a70-cc9d-4726-ac39-50e0239c2082" name="Default Changelist" comment="add some feature">
+    <list default="true" id="e2233a70-cc9d-4726-ac39-50e0239c2082" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec.sh" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Game/Game.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Game/Game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/conf.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,13 +58,13 @@
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\dyominov\WebstormProjects\basketball\node_modules\prettier" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dyominov\WebstormProjects\basketball\src\components" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\dyominov\WebstormProjects\basketball\src\components\Game" />
       <recent name="C:\Users\dyominov\WebstormProjects\basketball" />
       <recent name="C:\Users\dyominov\WebstormProjects\basketball\src\store\reducers" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\dyominov\WebstormProjects\basketball\src\components" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -194,7 +199,7 @@
       <workItem from="1571380901510" duration="616000" />
       <workItem from="1572191215634" duration="153000" />
       <workItem from="1572250606381" duration="444000" />
-      <workItem from="1572293748832" duration="5698000" />
+      <workItem from="1572293748832" duration="6387000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1557843134661</created>
@@ -287,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572303136635</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="add some feature">
+      <created>1572303500754</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1572303500754</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

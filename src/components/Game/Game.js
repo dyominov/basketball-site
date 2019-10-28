@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
-import './Game.css';
+import React, { useState } from "react";
+import "./Game.css";
 
 const Game = props => {
-  const [games, setGames] = useState('');
-
-  console.log(games);
+  const [games, setGames] = useState("");
 
   return (
     <div className="game">
