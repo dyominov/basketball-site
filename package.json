@@ -1,5 +1,5 @@
 {
-  "homepage": "https://dyominov-basket.herokuapp.com/",
+  "homepage": "http://dyominov-basket.herokuapp.com/",
   "name": "basketball",
   "version": "0.2.0",
   "private": true,
@@ -25,7 +25,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "start": "react-scripts start",
+    "start": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "prettier": "prettier --write \"**/*.js\"",
