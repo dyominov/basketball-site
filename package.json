@@ -1,4 +1,5 @@
 {
+  "homepage": "http://dyominov.github.io/my-app",
   "name": "basketball",
   "version": "0.2.0",
   "private": true,
@@ -23,6 +24,8 @@
     "history": "latest"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
