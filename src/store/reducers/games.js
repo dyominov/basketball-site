@@ -1,4 +1,4 @@
-import { GET_RESULT } from '../actions/actionTypes';
+import { GET_RESULT } from "../actions/actionTypes";
 
 const initialState = {
   percentHome: 0,

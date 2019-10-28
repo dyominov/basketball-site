@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { Navbar, Button } from 'react-bootstrap';
-import './App.css';
+import React, { Component } from "react";
+import { Navbar, Button } from "react-bootstrap";
+import "./App.css";
 
 class App extends Component {
   goTo(route) {
@@ -10,7 +10,7 @@ class App extends Component {
   componentDidMount() {
     const { renewSession } = this.props.auth;
 
-    if (localStorage.getItem('isLoggedIn') === 'true') {
+    if (localStorage.getItem("isLoggedIn") === "true") {
       renewSession();
     }
   }
@@ -21,7 +21,11 @@ class App extends Component {
         <Navbar fluid>
           <Navbar.Header>
             <Navbar.Brand>Basketball</Navbar.Brand>
-            <Button bsStyle="primary" className="btn-margin" onClick={this.goTo.bind(this, 'home')}>
+            <Button
+              bsStyle="primary"
+              className="btn-margin"
+              onClick={this.goTo.bind(this, "home")}
+            >
               Home
             </Button>
           </Navbar.Header>

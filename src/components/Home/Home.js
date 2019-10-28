@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Button } from 'react-bootstrap';
+import React, { Component } from "react";
+import { Button } from "react-bootstrap";
 
 class Home extends Component {
   goTo(route) {
@@ -13,16 +13,24 @@ class Home extends Component {
   render() {
     return (
       <div className="container">
-        <Button bsStyle="primary" className="btn-margin" onClick={this.goTo.bind(this, 'games')}>
+        <Button
+          bsStyle="primary"
+          className="btn-margin"
+          onClick={this.goTo.bind(this, "games")}
+        >
           Add game
         </Button>
-        <Button bsStyle="primary" className="btn-margin" onClick={this.goTo.bind(this, 'result')}>
+        <Button
+          bsStyle="primary"
+          className="btn-margin"
+          onClick={this.goTo.bind(this, "result")}
+        >
           Result
         </Button>
         <Button
           bsStyle="primary"
           className="btn-margin"
-          onClick={this.goTo.bind(this, 'add-game-fast')}
+          onClick={this.goTo.bind(this, "add-game-fast")}
         >
           Add Game (Fast)
         </Button>

@@ -1,7 +1,7 @@
-import React, { Component, Fragment } from 'react';
-import { getResultAction } from '../store/actions/gameActions';
-import { connect } from 'react-redux';
-import Result from '../components/Game/Result';
+import React, { Component, Fragment } from "react";
+import { getResultAction } from "../store/actions/gameActions";
+import { connect } from "react-redux";
+import Result from "../components/Game/Result";
 
 class ResultContainer extends Component {
   render() {

@@ -1,4 +1,4 @@
-import history from '../history';
+import history from "../history";
 
 export default class Auth {
   accessToken;
@@ -24,7 +24,7 @@ export default class Auth {
       if (authResult && authResult.accessToken && authResult.idToken) {
         this.setSession(authResult);
       } else if (err) {
-        history.replace('/home');
+        history.replace("/home");
         console.log(err);
         alert(`Error: ${err.error}. Check the console for further details.`);
       }
@@ -41,7 +41,7 @@ export default class Auth {
 
   setSession(authResult) {
     // Set isLoggedIn flag in localStorage
-    localStorage.setItem('isLoggedIn', 'true');
+    localStorage.setItem("isLoggedIn", "true");
 
     // Set the time that the access token will expire at
     let expiresAt = authResult.expiresIn * 1000 + new Date().getTime();
@@ -50,7 +50,7 @@ export default class Auth {
     this.expiresAt = expiresAt;
 
     // navigate to the home route
-    history.replace('/home');
+    history.replace("/home");
   }
 
   renewSession() {
@@ -60,7 +60,9 @@ export default class Auth {
       } else if (err) {
         this.logout();
         console.log(err);
-        alert(`Could not get a new token (${err.error}: ${err.error_description}).`);
+        alert(
+          `Could not get a new token (${err.error}: ${err.error_description}).`
+        );
       }
     });
   }
@@ -72,14 +74,14 @@ export default class Auth {
     this.expiresAt = 0;
 
     // Remove isLoggedIn flag from localStorage
-    localStorage.removeItem('isLoggedIn');
+    localStorage.removeItem("isLoggedIn");
 
     this.auth0.logout({
       return_to: window.location.origin
     });
 
     // navigate to the home route
-    history.replace('/home');
+    history.replace("/home");
   }
 
   isAuthenticated() {

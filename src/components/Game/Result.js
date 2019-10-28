@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import './Over.css';
-import Over from './Over';
-import Score from './Score';
-import Handicape from './Handicape';
+import React, { useState } from "react";
+import "./Over.css";
+import Over from "./Over";
+import Score from "./Score";
+import Handicape from "./Handicape";
 
 const Result = props => {
-  const [homeTeamName, setHomeTeamName] = useState('Boston');
-  const [awayTeamName, setAwayTeamName] = useState('Boston');
+  const [homeTeamName, setHomeTeamName] = useState("Boston");
+  const [awayTeamName, setAwayTeamName] = useState("Boston");
   const [totalScore, setTotalScore] = useState(0);
   const [halfScore, setHalfScore] = useState(0);
   const [homeScore, setHomeScore] = useState(0);
@@ -27,7 +27,10 @@ const Result = props => {
         <form>
           <label>
             Home Team:
-            <select value={homeTeamName} onChange={e => setHomeTeamName(e.target.value)}>
+            <select
+              value={homeTeamName}
+              onChange={e => setHomeTeamName(e.target.value)}
+            >
               <option value="Boston">Boston</option>
               <option value="Chicago">Chicago</option>
               <option value="Cleveland">Cleveland</option>
@@ -46,7 +49,10 @@ const Result = props => {
               <option value="San Antonio">San Antonio</option>
             </select>
             Home score:
-            <select value={homeScore} onChange={e => setHomeScore(e.target.value)}>
+            <select
+              value={homeScore}
+              onChange={e => setHomeScore(e.target.value)}
+            >
               <option value="104.5">104.5</option>
               <option value="103.5">103.5</option>
               <option value="102.5">102.5</option>
@@ -79,7 +85,10 @@ const Result = props => {
         <form>
           <label>
             Away Team:
-            <select value={awayTeamName} onChange={e => setAwayTeamName(e.target.value)}>
+            <select
+              value={awayTeamName}
+              onChange={e => setAwayTeamName(e.target.value)}
+            >
               <option value="Boston">Boston</option>
               <option value="Chicago">Chicago</option>
               <option value="Cleveland">Cleveland</option>
@@ -98,7 +107,10 @@ const Result = props => {
               <option value="San Antonio">San Antonio</option>
             </select>
             Away score:
-            <select value={awayScore} onChange={e => setAwayScore(e.target.value)}>
+            <select
+              value={awayScore}
+              onChange={e => setAwayScore(e.target.value)}
+            >
               <option value="104.5">104.5</option>
               <option value="103.5">103.5</option>
               <option value="102.5">102.5</option>
@@ -128,7 +140,10 @@ const Result = props => {
             </select>
             <p />
             Handicap:
-            <select value={handicape} onChange={e => setHandicape(e.target.value)}>
+            <select
+              value={handicape}
+              onChange={e => setHandicape(e.target.value)}
+            >
               <option value="-16.5">-16.5</option>
               <option value="-15.5">-15.5</option>
               <option value="-14.5">-14.5</option>
@@ -166,7 +181,10 @@ const Result = props => {
             </select>
             <p />
             Total score:
-            <select value={totalScore} onChange={e => setTotalScore(e.target.value)}>
+            <select
+              value={totalScore}
+              onChange={e => setTotalScore(e.target.value)}
+            >
               <option value="191.5">191.5</option>
               <option value="190.5">190.5</option>
               <option value="189.5">189.5</option>
@@ -186,7 +204,10 @@ const Result = props => {
 
         <form>
           Half score:
-          <select value={halfScore} onChange={e => setHalfScore(e.target.value)}>
+          <select
+            value={halfScore}
+            onChange={e => setHalfScore(e.target.value)}
+          >
             <option value="98.5">98.5</option>
             <option value="97.5">97.5</option>
             <option value="96.5">96.5</option>
@@ -201,7 +222,10 @@ const Result = props => {
             <option value="87.5">87.5</option>
           </select>
           Half Handicap:
-          <select value={halfHandicape} onChange={e => setHalfHandicape(e.target.value)}>
+          <select
+            value={halfHandicape}
+            onChange={e => setHalfHandicape(e.target.value)}
+          >
             <option value="-16.5">-16.5</option>
             <option value="-15.5">-15.5</option>
             <option value="-14.5">-14.5</option>
@@ -269,7 +293,10 @@ const Result = props => {
         <p />
         <p />
         Half Score
-        <Handicape handicape={halfHandicape} percent={props.games.handicapHalf} />
+        <Handicape
+          handicape={halfHandicape}
+          percent={props.games.handicapHalf}
+        />
       </div>
       <div className="over">
         <Over totalScore={halfScore} score={props.games.averageHalf} />
@@ -277,9 +304,15 @@ const Result = props => {
       <p />
       <p />
       <div className="over">
-        <Over totalScore={Number(totalScore) - 3} score={props.games.minTotal} />
+        <Over
+          totalScore={Number(totalScore) - 3}
+          score={props.games.minTotal}
+        />
         <Over totalScore={totalScore} score={props.games.averageTotal} />
-        <Over totalScore={Number(totalScore) + 3} score={props.games.maxTotal} />
+        <Over
+          totalScore={Number(totalScore) + 3}
+          score={props.games.maxTotal}
+        />
       </div>
       {
         //setInterval(props.getResult({ homeTeam, awayTeam, totalScore, homeScore, awayScore, handicape }, 3000))

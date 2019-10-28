@@ -1,11 +1,11 @@
-import { root } from '../config/conf';
+import { root } from "../config/conf";
 
 export const createGame = async game => {
   return await fetch(`${root}/game`, {
-    method: 'POST',
+    method: "POST",
     headers: {
-      Accept: 'application/json',
-      'Content-Type': 'text/plan'
+      Accept: "application/json",
+      "Content-Type": "text/plan"
     },
     body: JSON.stringify(game)
   })
@@ -16,10 +16,10 @@ export const createGame = async game => {
 
 export const getResult = async game => {
   return await fetch(`${root}/game/result`, {
-    method: 'PUT',
+    method: "PUT",
     headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json'
+      Accept: "application/json",
+      "Content-Type": "application/json"
     },
     body: JSON.stringify(game)
   })
@@ -30,10 +30,10 @@ export const getResult = async game => {
 
 export const parseData = async game => {
   return await fetch(`${root}/game/over`, {
-    method: 'PUT',
+    method: "PUT",
     headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json'
+      Accept: "application/json",
+      "Content-Type": "application/json"
     },
     body: JSON.stringify(game)
   })
