@@ -32,7 +32,6 @@ export const makeMainRoutes = () => {
     <Provider store={store}>
       <Router history={history}>
         <div>
-          <Route path="/" render={props => <App auth={auth} {...props} />} />
           <Route
             path="/home"
             render={props => <Home auth={auth} {...props} />}

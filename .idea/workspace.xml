@@ -1,32 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2233a70-cc9d-4726-ac39-50e0239c2082" name="Default Changelist" comment="add some feature">
+    <list default="true" id="e2233a70-cc9d-4726-ac39-50e0239c2082" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Auth/Auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Auth/Auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Callback/Callback.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Callback/Callback.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/game-api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/game-api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Game/AddGameFast.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Game/Handicape.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Game/Handicape.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Game/ManyInputs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Game/Over.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Game/Over.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Game/Parse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Game/Parse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Game/Result.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Game/Result.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Game/Score.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Game/Score.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/AddGameFastContainer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/GameContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/GameContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/InputsContainer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/ResultContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/ResultContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/history.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/history.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/actionTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/gameActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/gameActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/games.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/games.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -216,7 +193,7 @@
       <workItem from="1571380901510" duration="616000" />
       <workItem from="1572191215634" duration="153000" />
       <workItem from="1572250606381" duration="444000" />
-      <workItem from="1572293748832" duration="7683000" />
+      <workItem from="1572293748832" duration="8275000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1557843134661</created>
@@ -323,7 +300,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572304369920</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="add some feature">
+      <created>1572305508539</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1572305508539</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
