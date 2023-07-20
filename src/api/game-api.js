@@ -15,6 +15,7 @@ export const createGame = async game => {
 };
 
 export const getResult = async game => {
+  console.log(game);
   return await fetch(`${root}/game/result`, {
     method: "PUT",
     headers: {

@@ -2,12 +2,12 @@ import { GET_RESULT } from "../actions/actionTypes";
 
 const initialState = {
   percentHome: 0,
-  handicapHalf: 0,
   percentAway: 0,
-  averageHalf: 0,
-  minTotal: 0,
+  firstQuart: 0,
+  secondQuart: 0,
+  threeQuart: 0,
+  fourQuart: 0,
   averageTotal: 0,
-  maxTotal: 0,
   handicape: 0
 };
 
@@ -16,13 +16,13 @@ export const gameReducer = (state = initialState, { type, payload }) => {
     case GET_RESULT: {
       return {
         percentHome: payload.percentHome,
-        handicapHalf: payload.handicapHalf,
         percentAway: payload.percentAway,
-        averageHalf: payload.averageHalf,
-        minTotal: payload.minTotal,
-        averageTotal: payload.averageTotal,
-        maxTotal: payload.maxTotal,
-        handicape: payload.handicape
+        firstQuart: payload.firstQuart,
+        secondQuart: payload.secondQuart,
+        threeQuart: payload.threeQuart,
+        fourQuart: payload.fourQuart,
+        averageTotal: payload.average,
+        handicape: payload.handicap
       };
     }
     default:

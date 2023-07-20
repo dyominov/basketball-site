@@ -1,18 +1,14 @@
 import React from "react";
 import { Route, Router } from "react-router-dom";
-import App from "./App";
-import Home from "./components/Home/Home";
 import Callback from "./Callback/Callback";
 import Auth from "./Auth/Auth";
 import history from "./history";
-import Parse from "./components/Game/Parse";
 import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
 import reducers from "./store/reducers";
 import ResultContainer from "./container/ResultContainer";
-import GameContainer from "./container/GameContainer";
 
 const auth = new Auth();
 
@@ -33,8 +29,8 @@ export const makeMainRoutes = () => {
       <Router history={history}>
         <div>
           <Route
-            path="/home"
-            render={props => <Home auth={auth} {...props} />}
+            path=""
+            render={props => <ResultContainer auth={auth} {...props} />}
           />
           <Route
             path="/callback"
@@ -42,18 +38,6 @@ export const makeMainRoutes = () => {
               handleAuthentication(props);
               return <Callback {...props} />;
             }}
-          />
-          <Route
-            path="/games"
-            render={props => <GameContainer auth={auth} {...props} />}
-          />
-          <Route
-            path="/result"
-            render={props => <ResultContainer auth={auth} {...props} />}
-          />
-          <Route
-            path="/parse"
-            render={props => <Parse auth={auth} {...props} />}
           />
         </div>
       </Router>
